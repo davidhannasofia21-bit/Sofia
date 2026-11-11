@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | HOFUR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">HOFUR<span>.</span></a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="project.html">Products</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <span class="cart-link">
+                Cart (<span id="cartCount">0</span>)
+            </span>
+        </nav>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="page-banner">
+        <p class="subtitle">HOFUR COLLECTION</p>
+        <h1>Our Furniture Products</h1>
+        <p>Find the perfect furniture for your dream home.</p>
+    </section>
+
+    <!-- SEARCH AND FILTER -->
+    <section class="section">
+        <div class="shop-controls">
+            <input type="search" id="searchInput"
+                placeholder="Search furniture...">
+
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Living Room">Living Room</option>
+                <option value="Bedroom">Bedroom</option>
+                <option value="Dining Room">Dining Room</option>
+            </select>
+        </div>
+
+        <!-- PRODUCT LIST -->
+        <div class="product-grid" id="productGrid">
+
+            <div class="product-card" data-category="Living Room"
+                data-name="Modern Sofa">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc"
+                    alt="Modern sofa">
+                <div class="product-info">
+                    <span class="product-category">Living Room</span>
+                    <h3>Modern Sofa</h3>
+                    <p>₱12,500</p>
+                    <button class="btn add-cart"
+                        data-name="Modern Sofa">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="Bedroom"
+                data-name="Comfortable Bed">
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+                    alt="Comfortable bed">
+                <div class="product-info">
+                    <span class="product-category">Bedroom</span>
+                    <h3>Comfortable Bed</h3>
+                    <p>₱15,000</p>
+                    <button class="btn add-cart"
+                        data-name="Comfortable Bed">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="Dining Room"
+                data-name="Wooden Dining Table">
+                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200"
+                    alt="Wooden dining table">
+                <div class="product-info">
+                    <span class="product-category">Dining Room</span>
+                    <h3>Wooden Dining Table</h3>
+                    <p>₱8,500</p>
+                    <button class="btn add-cart"
+                        data-name="Wooden Dining Table">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="Living Room"
+                data-name="Coffee Table">
+                <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc"
+                    alt="Coffee table">
+                <div class="product-info">
+                    <span class="product-category">Living Room</span>
+                    <h3>Coffee Table</h3>
+                    <p>₱5,500</p>
+                    <button class="btn add-cart"
+                        data-name="Coffee Table">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="Bedroom"
+                data-name="Modern Bedroom Cabinet">
+                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2"
+                    alt="Bedroom cabinet">
+                <div class="product-info">
+                    <span class="product-category">Bedroom</span>
+                    <h3>Bedroom Cabinet</h3>
+                    <p>₱7,000</p>
+                    <button class="btn add-cart"
+                        data-name="Bedroom Cabinet">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="Dining Room"
+                data-name="Dining Chair">
+                <img src="https://images.unsplash.com/photo-1503602642458-232111445657"
+                    alt="Dining chair">
+                <div class="product-info">
+                    <span class="product-category">Dining Room</span>
+                    <h3>Dining Chair</h3>
+                    <p>₱2,500</p>
+                    <button class="btn add-cart"
+                        data-name="Dining Chair">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+        <p id="noProducts" class="no-products" hidden>
+            No furniture products found.
+        </p>
+
+        <!-- CART -->
+        <div class="cart-section">
+            <h2>My Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <h3>Total: <span id="cartTotal">₱0</span></h3>
+            <button class="btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>HOFUR<span>.</span></h2>
+        <p>Making Every Home Beautiful and Comfortable.</p>
+        <p>&copy; <span id="year"></span> HOFUR Home Furniture.</p>
+        <a href="index.html">Back to Home</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
